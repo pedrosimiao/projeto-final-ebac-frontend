@@ -1,0 +1,24 @@
+Tanstack Query
+
+No curso, aprendemos sobre RTK Query para gerenciar o estado do servidor,
+que é uma excelente ferramenta dentro do ecossistema Redux.
+
+Ao desenvolver o projeto, percebi que o gerenciamento manual do server state
+(como o polling de notificações e o re-fetching de todos os posts)
+estava gerando complexidade e possíveis ineficiências.
+
+Para resolver esses desafios de forma mais otimizada e alinhada com as melhores práticas de mercado
+para gerenciamento de server state, optei por integrar o TanStack Query.
+Ele me permitiu delegar o caching, revalidação e polling automáticos para uma biblioteca especializada,
+simplificando o uso do Redux para o que ele faz de melhor (o client state)
+e melhorando a performance e a experiência do usuário com menos boilerplate.
+
+
+
+
+ThemeProvider
+
+Mention  (primereact)
+
+"emoji-picker-react";
+'browser-image-compression';

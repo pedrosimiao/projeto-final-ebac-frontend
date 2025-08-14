@@ -1,0 +1,275 @@
+// src/components/Sidebar/styles.ts
+
+import styled from "styled-components";
+
+export const SidebarContainer = styled.aside`
+  position: sticky;
+  top: 0;
+  width: 25vw;
+  min-width: 16rem;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid ${({ theme }) => theme.colors.border};
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop})
+  and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 96px;
+    min-width: 96px;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 115px;
+    min-width: 115px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    background-image: ${({ theme }) => theme.colors.backgroundGradient};
+    border-right: none;
+    border-top: 2px solid ${({ theme }) => theme.colors.border};
+    padding: 0;
+    z-index: 10000;
+  }
+`;
+
+export const InnerContainer = styled.div`
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+
+  @media (${({ theme }) => theme.breakpoints.desktop})
+  and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.5rem;
+
+    img {
+      display: none;
+    }
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 426px) {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+`;
+
+export const NavList = styled.ul`
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 425px) {
+    display: flex;
+    width: 100%;
+  }
+`;
+
+export const NavItem = styled.li`
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.text};
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.accent};
+    }
+
+    svg {
+      margin-right: 0.7rem;
+      font-size: 1.5rem;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 426px) {
+      justify-content: center;
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+
+      span {
+        display: none;
+      }
+
+      svg {
+        margin-top: 1.3rem;
+        margin-right: 0;
+      }
+    }
+  }
+`;
+
+export const PostButtonContainer = styled.div`
+  width: 230px;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1024px) and (min-width: 426px) {
+    width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
+/* Botão "Post" */
+export const PostButton = styled.button`
+  width: 100%;
+  padding: 0.75rem;
+  background-color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.background};
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (min-width: 1025px) {
+    svg {
+      display: none;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    span {
+      display: inline;
+      margin-left: 0.5rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop})
+  and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+
+    span {
+      display: none;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
+export const MobilePostButton = styled.button`
+  position: fixed;
+  bottom: 70px; // Acima da mobile sidebar
+  right: 1rem;
+  z-index: 10001;
+  background-color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.background};
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  /* &:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+    pointer-events: none;
+    display: none;
+  } */
+
+  @media (min-width: 426px) {
+    display: none;
+  }
+`;
+
+export const NotificationBadge = styled.div`
+  position: absolute;
+  top: -6px;
+  right: 0;
+  background-color: red;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.background};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    top: 18px;
+    right: -8px;
+  }
+`;
+
+export const BellWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  svg {
+    position: relative;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+`;

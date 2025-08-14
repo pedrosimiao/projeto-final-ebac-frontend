@@ -1,0 +1,188 @@
+
+C:\Users\simia\Desktop\EBAC\Full Stack Python\Projeto Final\twitter-clone-frontend
+├── .editorconfig
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── eslint.config.js
+├── index.html
+├── notes.txt
+├── package-lock.json
+├── package.json
+├── README.md
+├── src
+|  ├── api
+|  |  ├── apiClient.ts
+|  |  ├── authApi.ts
+|  |  ├── commentApi.ts
+|  |  ├── followApi.ts
+|  |  ├── hashtagApi.ts
+|  |  ├── likeApi.ts
+|  |  ├── notificationApi.ts
+|  |  ├── postApi.ts
+|  |  └── userApi.ts
+|  ├── app
+|  |  └── MainRoutesContent
+|  |     └── index.tsx
+|  ├── App.tsx
+|  ├── assets
+|  |  ├── default-avatar.png
+|  |  └── logo.png
+|  ├── components
+|  |  ├── AuthLayout
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── AuthLinks
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── CommentCard
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── CommentDetailCard
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── CommentList
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── DeleteButton
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── DeleteModal
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── FeedContent
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── FeedHeader
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── FullScreenLoader
+|  |  |  └── index.tsx
+|  |  ├── Loading
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── Logo
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── NotificationList
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── PostCard
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── PostCardCompact
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── PostDetailCard
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── PostInput
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── PostList
+|  |  |  └── index.tsx
+|  |  ├── PostModal
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── ReplyInput
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── RightSidebar
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── SearchBar
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── SearchList
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── Sidebar
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  └── UserList
+|  |     ├── index.tsx
+|  |     └── styles.ts
+|  ├── hooks
+|  |  ├── useAppInitializer.ts
+|  |  ├── useAuth.ts
+|  |  ├── useClickOutside.ts
+|  |  ├── useComments.ts
+|  |  ├── useFollows.ts
+|  |  ├── useHashtags.ts
+|  |  ├── useLikes.ts
+|  |  ├── useNavigateBack.ts
+|  |  ├── useNotifications.ts
+|  |  ├── usePosts.ts
+|  |  └── useUsers.ts
+|  ├── main.tsx
+|  ├── pages
+|  |  ├── Feed
+|  |  |  ├── ChangePasswordPage
+|  |  |  |  └── index.tsx
+|  |  |  ├── DeleteProfilePage
+|  |  |  |  └── index.tsx
+|  |  |  ├── EditProfilePage
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── Explore
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── Follows
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── Home
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── index.tsx
+|  |  |  ├── Notifications
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── Profile
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── SettingsPage
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  ├── Status
+|  |  |  |  ├── index.tsx
+|  |  |  |  └── styles.ts
+|  |  |  └── styles.ts
+|  |  ├── Login
+|  |  |  ├── index.tsx
+|  |  |  └── styles.ts
+|  |  ├── SignUp
+|  |  |  └── index.tsx
+|  |  └── Welcome
+|  |     ├── index.tsx
+|  |     └── styles.ts
+|  ├── routes.tsx
+|  ├── store
+|  |  ├── slices
+|  |  |  ├── authSlice.ts
+|  |  |  ├── replySlice.ts
+|  |  |  └── retweetSlice.ts
+|  |  └── store.ts
+|  ├── styles.ts
+|  ├── theme.ts
+|  ├── types.d.ts
+|  ├── utils
+|  |  ├── apiErrorUtils.ts
+|  |  ├── dateUtils.ts
+|  |  ├── handleCommentClick.ts
+|  |  ├── idUtils.ts
+|  |  ├── parsePostText.tsx
+|  |  ├── StyledTokens.ts
+|  |  └── utilSuggestions.ts
+|  └── vite-env.d.ts
+├── structure.txt
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+directory: 2001 file: 16747
+
+ignored: directory (20), file (1)
+
+
+[2K[1G
