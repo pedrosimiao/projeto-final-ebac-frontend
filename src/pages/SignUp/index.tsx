@@ -52,6 +52,7 @@ const SignUp = () => {
 
   useEffect(() => {
     if (isSuccess) {
+      alert("Registration successful! You will be redirected to the login page.");
       navigate("/login");
     }
   }, [isSuccess, navigate]);
