@@ -16,7 +16,7 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   align-items: center;
   max-width: 600px;
   width: 100%;
-  height: 3.25rem;
+  //height: 3.25rem;
   padding: ${({ $noPadding }) => ($noPadding ? "0" : "1rem")};
   background-image: ${({ theme }) => theme.colors.backgroundGradient};
   background-clip: padding-box;
