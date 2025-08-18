@@ -13,7 +13,6 @@ const GlobalStyleSheet = createGlobalStyle`
   html, body, #root, #root > div {
     min-width: 0;
     width: 100%;
-    overflow-x: hidden;
   }
 
   body {
