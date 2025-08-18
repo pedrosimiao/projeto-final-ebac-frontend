@@ -28,7 +28,7 @@ export const SidebarContainer = styled.aside`
     min-width: 115px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile} and (min-width: '599px') {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile} and (min-width: '599px')) {
     position: fixed;
     top: auto;
     bottom: 0;
