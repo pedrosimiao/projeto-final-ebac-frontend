@@ -10,6 +10,11 @@ const GlobalStyleSheet = createGlobalStyle`
     list-style: none;
   }
 
+  html, body, #root, #root > div {
+    min-width: 0;
+    width: 100%;
+  }
+
   body {
     background: ${({ theme }) => theme.colors.backgroundGradient};
     color: ${({ theme }) => theme.colors.text};
