@@ -9,7 +9,7 @@ interface FeedHeaderProps {
 }
 
 export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: row;
