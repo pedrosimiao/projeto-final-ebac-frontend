@@ -23,10 +23,6 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   color: ${({ theme }) => theme.colors.text};
   text-shadow: none;
   z-index: 9998;
-
-  left: 50%;
-  transform: translateX(-50%);
-  box-sizing: border-box;
 `;
 
 export const BackLink = styled(Link)`
