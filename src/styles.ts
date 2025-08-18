@@ -13,6 +13,7 @@ const GlobalStyleSheet = createGlobalStyle`
   html, body, #root, #root > div {
     min-width: 0;
     width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -20,7 +21,6 @@ const GlobalStyleSheet = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
     min-height: 100vh;
-    overflow-x: hidden;
   }
 
   a {
