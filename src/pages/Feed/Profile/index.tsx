@@ -55,6 +55,7 @@ import {
   ActionsContainer,
   EditProfileButton,
   VisitedActionsContainer,
+  CoverWrapper,
   CoverEditButton,
   ProfilePictureWrapper,
   ProfileEditButton,
@@ -217,33 +218,55 @@ const Profile = () => {
         </FeedHeader>
 
         {profileUser.cover_image ? (
-          <CoverImage src={profileUser.cover_image} alt="Cover" />
-        ) : (
-          <CoverImage
-            as="div"
-            style={{
-              background: "linear-gradient(to right, #ffffff, #aaaaaa)",
-              height: "200px",
-            }}
-          />
-        )}
+          <CoverWrapper>
+            <CoverImage src={profileUser.cover_image} alt="Cover" />
 
-        {isOwnProfile && (
-          <>
-            <input
-              type="file"
-              accept="image/*"
-              ref={coverInputRef}
-              style={{ display: "none" }}
-              onChange={handleCoverUpload}
-            />
-            <CoverEditButton
-              onClick={() => coverInputRef.current?.click()}
-              disabled={updateProfileLoading}
-            >
-              <FaCameraRetro />
-            </CoverEditButton>
-          </>
+            {isOwnProfile && (
+              <>
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={coverInputRef}
+                  style={{ display: "none" }}
+                  onChange={handleCoverUpload}
+                />
+                <CoverEditButton
+                  onClick={() => coverInputRef.current?.click()}
+                  disabled={updateProfileLoading}
+                >
+                  <FaCameraRetro />
+                </CoverEditButton>
+              </>
+            )}
+          </CoverWrapper>
+        ) : (
+            <CoverWrapper>
+              <CoverImage
+                as="div"
+                style={{
+                  background: "linear-gradient(to right, #ffffff, #aaaaaa)",
+                  height: "200px",
+                }}
+              />
+
+              {isOwnProfile && (
+                <>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    ref={coverInputRef}
+                    style={{ display: "none" }}
+                    onChange={handleCoverUpload}
+                  />
+                  <CoverEditButton
+                    onClick={() => coverInputRef.current?.click()}
+                    disabled={updateProfileLoading}
+                  >
+                    <FaCameraRetro />
+                  </CoverEditButton>
+                </>
+              )}
+            </CoverWrapper>
         )}
 
         <ProfileInfo>

@@ -14,6 +14,13 @@ export const ProfileContainer = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};
 `;
 
+export const CoverWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+`;
+
+
 export const CoverImage = styled.img`
   width: 100%;
   height: auto;
