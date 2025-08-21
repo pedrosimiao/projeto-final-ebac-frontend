@@ -27,13 +27,13 @@ export const SidebarContainer = styled.aside`
     min-width: 115px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) and (min-width: "599px") {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     position: fixed;
     top: auto;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     height: 60px;
     flex-direction: row;
     background-image: ${({ theme }) => theme.colors.backgroundGradient};
