@@ -9,6 +9,6 @@ export const FeedContainer = styled.main`
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 100vw;
+    width: 100%;
   }
 `;
