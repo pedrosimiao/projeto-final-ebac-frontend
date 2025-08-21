@@ -10,11 +10,17 @@ const GlobalStyleSheet = createGlobalStyle`
     list-style: none;
   }
 
+  html, body, #root, #root > div {
+    min-width: 0;
+    width: 100%;
+  }
+
   body {
     background: ${({ theme }) => theme.colors.backgroundGradient};
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   a {
