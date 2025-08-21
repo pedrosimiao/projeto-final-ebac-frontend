@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0;
   /* padding-top: 3.25rem; */
   padding-bottom: 0.3rem;

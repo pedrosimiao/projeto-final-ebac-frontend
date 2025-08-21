@@ -6,7 +6,6 @@ export const SidebarContainer = styled.aside`
   position: sticky;
   top: 0;
   width: 25vw;
-  /* min-width: 16rem; */
   height: 100vh;
   padding: 1rem;
   display: flex;
