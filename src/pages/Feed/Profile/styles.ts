@@ -192,7 +192,7 @@ export const ProfileEditButton = styled.button`
 
 export const CoverEditButton = styled.button`
   position: absolute;
-  top: 3.75rem;
+  bottom: 1.5rem;
   right: 1rem;
   background-color: rgba(255, 255, 255, 0.8);
   color: ${({ theme }) => theme.colors.background};
