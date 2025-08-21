@@ -9,7 +9,7 @@ export const FeedContainer = styled.main`
   position: relative;
 
   /* Em telas ≤425px, ocupa toda a largura da viewport */
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100vw;
   }
 `;
