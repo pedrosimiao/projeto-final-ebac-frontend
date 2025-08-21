@@ -14,7 +14,7 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 600px;
+  max-width: inherit;
   width: 100%;
   height: 3.25rem;
   padding: ${({ $noPadding }) => ($noPadding ? "0" : "1rem")};

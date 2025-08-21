@@ -24,33 +24,6 @@ export const RightSidebarContainer = styled.aside`
   }
 `;
 
-// export const SearchContainer = styled.div`
-//   max-width: 350px;
-//   width: 100%;
-
-//   input {
-//     padding: 1rem;
-//     width: 85%;
-//     height: 2.4rem;
-//     border: none;
-//     border-radius: 20px;
-
-//     @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-//       width: 80%;
-//     }
-//   }
-
-//   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-//     max-width: 290px;
-//     height: 2.2rem;
-//   }
-
-//   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-//     display: none;
-//   }
-// `;
-
-
 export const RightSidebarCard = styled.div`
   padding: 0.3rem 1rem;
   max-width: 350px;

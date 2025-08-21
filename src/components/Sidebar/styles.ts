@@ -6,7 +6,7 @@ export const SidebarContainer = styled.aside`
   position: sticky;
   top: 0;
   width: 25vw;
-  min-width: 16rem;
+  /* min-width: 16rem; */
   height: 100vh;
   padding: 1rem;
   display: flex;
@@ -16,8 +16,7 @@ export const SidebarContainer = styled.aside`
   flex-shrink: 0;
   overflow: hidden;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop})
-  and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 96px;
     min-width: 96px;
     padding: 0.5rem;
@@ -28,7 +27,7 @@ export const SidebarContainer = styled.aside`
     min-width: 115px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile} and (min-width: '599px')) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) and (min-width: "599px") {
     position: fixed;
     top: auto;
     bottom: 0;
@@ -50,8 +49,7 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (${({ theme }) => theme.breakpoints.desktop})
-  and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
   }
 
@@ -189,8 +187,7 @@ export const PostButton = styled.button`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop})
-  and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -222,13 +219,6 @@ export const MobilePostButton = styled.button`
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-
-  /* &:disabled {
-    opacity: 0;
-    cursor: not-allowed;
-    pointer-events: none;
-    display: none;
-  } */
 
   @media (min-width: 426px) {
     display: none;
