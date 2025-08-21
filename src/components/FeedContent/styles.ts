@@ -3,8 +3,7 @@
 import styled from "styled-components";
 
 export const FeedContainer = styled.main`
-  width: 100%;
-  max-width: 41.6vw;
+  width: 600px;
   min-height: 100vh;
   flex-grow: 0;
   position: relative;
