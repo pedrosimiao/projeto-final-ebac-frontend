@@ -7,7 +7,7 @@ export const SettingsContainer = styled.div`
   width: 100%;
   max-width: 600px;
   height: calc(100vh - 60px);
-  /* padding-top: 3.25rem; */
+  padding-top: 3.25rem;
   display: flex;
   flex-direction: column;
 `;

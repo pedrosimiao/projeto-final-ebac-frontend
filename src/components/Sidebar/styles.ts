@@ -99,9 +99,11 @@ export const NavList = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media (max-width: 425px) {
+  @media (max-width: 460px) {
     display: flex;
     width: 100%;
+    justify-content: space-around;
+    align-items: center;
   }
 `;
 
@@ -128,7 +130,7 @@ export const NavItem = styled.li`
       filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 426px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 461px) {
       justify-content: center;
 
       span {
@@ -136,7 +138,7 @@ export const NavItem = styled.li`
       }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 460px) {
       flex-direction: column;
 
       span {

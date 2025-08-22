@@ -8,7 +8,7 @@ export const SettingsPageContainer = styled.div`
   max-width: 600px;
   height: calc(100vh - 60px);
   margin: 0 auto;
-  /* padding-top: 3.25rem; */
+  padding-top: 3.25rem;
 `;
 
 export const HeaderText = styled.h2`
