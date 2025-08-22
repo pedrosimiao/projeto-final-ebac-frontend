@@ -9,7 +9,7 @@ interface FeedHeaderProps {
 }
 
 export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,7 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   background-clip: padding-box;
   color: ${({ theme }) => theme.colors.text};
   text-shadow: none;
-  z-index: 10000;
+  z-index: 9999;
 `;
 
 export const BackLink = styled(Link)`

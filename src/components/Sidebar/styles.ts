@@ -43,7 +43,7 @@ export const SidebarContainer = styled.aside`
       height: 60px;
 
       flex: none;
-      z-index: 10000;
+      z-index: 9999;
 
       display: flex;
       flex-direction: row;
@@ -66,7 +66,7 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: 460px) {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -218,22 +218,22 @@ export const PostButton = styled.button`
 
 export const MobilePostButton = styled.button`
   position: fixed;
-  bottom: 70px; // Acima da mobile sidebar
-  right: 1rem;
-  z-index: 10003;
+  bottom: 68px; // Acima da mobile sidebar
+  right: 0.8rem;
+  z-index: 10000;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
   border: none;
   border-radius: 50%;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  @media (min-width: 426px) {
+  @media (min-width: 460px) {
     display: none;
   }
 `;
