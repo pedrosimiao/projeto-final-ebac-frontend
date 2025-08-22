@@ -48,7 +48,7 @@ export const SidebarContainer = styled.aside`
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
 
       background-image: ${({ theme }) => theme.colors.backgroundGradient};
       border-right: none;
@@ -71,7 +71,7 @@ export const InnerContainer = styled.div`
     flex-direction: row;
     width: 100%;
     align-items: center;
-
+    justify-content: space-between;
     img {
       display: none;
     }

@@ -42,7 +42,7 @@ export const RightSidebarCard = styled.div`
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 290px;
+    /* max-width: 290px; */
     font-size: 0.8rem;
   }
 
