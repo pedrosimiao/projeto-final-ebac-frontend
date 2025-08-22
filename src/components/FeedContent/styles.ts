@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 export const FeedContainer = styled.main`
   /* width: 600px; */
-  flex: 0 1 600px;
-  max-width: 100%;
-  min-height: 100vh;
+  flex: 1 1 600px;
+  width: min(600px, 100%);
+  min-width: 0;
+  min-height: 100dvh;
   /* flex-grow: 0; */
   position: relative;
 

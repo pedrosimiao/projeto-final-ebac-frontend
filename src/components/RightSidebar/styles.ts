@@ -5,8 +5,12 @@ import styled from "styled-components";
 export const RightSidebarContainer = styled.aside`
   position: sticky;
   top: 0;
-  width: 30vw;
-  height: 100vh;
+
+  /* width: 30vw; */
+  flex: 1 1 30vw;
+  min-width: 0;
+
+  height: 100dvh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -16,6 +20,7 @@ export const RightSidebarContainer = styled.aside`
   border-left: 2px solid ${({ theme }) => theme.colors.border};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-basis: auto;
     width: auto;
   }
 
