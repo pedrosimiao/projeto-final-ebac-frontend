@@ -31,29 +31,33 @@ export const SidebarContainer = styled.aside`
     min-width: 115px;
   }
 
+  /* MOBILE: forçar barra inferior*/
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 60px;
+    && {
+      position: fixed !important;
+      inset: auto 0 0 0;
+      top: auto;
+      width: 100vw;
+      max-width: none;
+      min-width: 0;
+      height: 60px;
 
-    flex: none;
-    flex-shrink: 0;
+      flex: none;
+      z-index: 10000;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
 
-    flex-direction: row;
-    background-image: ${({ theme }) => theme.colors.backgroundGradient};
-    border-right: none;
-    border-top: 2px solid ${({ theme }) => theme.colors.border};
-    padding: 0;
-    z-index: 10000;
+      background-image: ${({ theme }) => theme.colors.backgroundGradient};
+      border-right: none;
+      border-top: 2px solid ${({ theme }) => theme.colors.border};
+      padding: 0;
+
+      transform: translateZ(0);
+      will-change: transform;
+    }
   }
 `;
 
