@@ -72,6 +72,7 @@ export const InnerContainer = styled.div`
     width: 100%;
     align-items: center;
     justify-content: space-between;
+
     img {
       display: none;
     }
@@ -102,7 +103,7 @@ export const NavList = styled.ul`
   @media (max-width: 460px) {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
   }
@@ -230,7 +231,7 @@ export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 68px; // Acima da mobile sidebar
   right: 0.8rem;
-  z-index: 10000;
+  z-index: 11000;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
   border: none;

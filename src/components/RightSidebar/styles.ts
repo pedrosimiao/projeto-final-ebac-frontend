@@ -41,11 +41,6 @@ export const RightSidebarCard = styled.div`
   border-radius: 16px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    /* max-width: 290px; */
-    font-size: 0.8rem;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
