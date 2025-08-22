@@ -70,7 +70,7 @@ export const InnerContainer = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0.5rem;
+    align-items: center;
 
     img {
       display: none;
@@ -114,7 +114,6 @@ export const NavItem = styled.li`
   @media (max-width: 460px) {
     width: auto;
     flex: 1 1 0;
-    margin-bottom: 0;
   }
 
   a {
@@ -136,7 +135,7 @@ export const NavItem = styled.li`
       filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 461px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 464px) {
       justify-content: center;
 
       span {
