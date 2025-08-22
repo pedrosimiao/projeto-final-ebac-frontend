@@ -9,14 +9,13 @@ interface FeedHeaderProps {
 }
 
 export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* max-width: inherit; */
-  /* width: 100%; */
-  width: min(600px, 100%);
+  max-width: inherit;
+  width: 100%;
   height: 3.25rem;
   padding: ${({ $noPadding }) => ($noPadding ? "0" : "1rem")};
   background-image: ${({ theme }) => theme.colors.backgroundGradient};

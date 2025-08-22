@@ -5,10 +5,11 @@ import styled from "styled-components";
 export const SettingsPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  height: calc(100vh - 60px);
+  /* max-width: 600px; */
+  /* min-height: calc(100vh - 60px); */
+  height: 100%;
   margin: 0 auto;
-  padding-top: 3.25rem;
+  /* padding-top: 3.25rem; */
 `;
 
 export const HeaderText = styled.h2`
