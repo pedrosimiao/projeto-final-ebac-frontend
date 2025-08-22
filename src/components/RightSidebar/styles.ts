@@ -24,7 +24,7 @@ export const RightSidebarContainer = styled.aside`
     width: auto;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: 460px) {
     display: none;
   }
 `;

@@ -66,10 +66,6 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  /* @media (${({ theme }) => theme.breakpoints.desktop}) {
-    width: 100%;
-  } */
-
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;
     flex-direction: row;
@@ -224,7 +220,7 @@ export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 70px; // Acima da mobile sidebar
   right: 1rem;
-  z-index: 10001;
+  z-index: 10003;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
   border: none;
