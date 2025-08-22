@@ -102,8 +102,9 @@ export const NavList = styled.ul`
   @media (max-width: 460px) {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 0.5rem;
   }
 `;
 
@@ -113,7 +114,9 @@ export const NavItem = styled.li`
 
   @media (max-width: 460px) {
     width: auto;
-    flex: 1 1 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   a {
