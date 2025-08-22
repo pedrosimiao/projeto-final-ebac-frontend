@@ -5,14 +5,19 @@ import styled from "styled-components";
 export const SidebarContainer = styled.aside`
   position: sticky;
   top: 0;
+
+  /* width: 25vw; */
   width: 25vw;
+  flex: 0 1 25vw;
+  min-width: 0;
+
   height: 100vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-right: 2px solid ${({ theme }) => theme.colors.border};
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -34,6 +39,15 @@ export const SidebarContainer = styled.aside`
     right: 0;
     width: 100%;
     height: 60px;
+
+    flex: none;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
     flex-direction: row;
     background-image: ${({ theme }) => theme.colors.backgroundGradient};
     border-right: none;
@@ -48,9 +62,9 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (${({ theme }) => theme.breakpoints.desktop}) {
+  /* @media (${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
-  }
+  } */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;
