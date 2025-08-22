@@ -48,7 +48,8 @@ export const SidebarContainer = styled.aside`
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      /* justify-content: space-between; */
+      justify-content: center;
 
       background-image: ${({ theme }) => theme.colors.backgroundGradient};
       border-right: none;
@@ -230,7 +231,7 @@ export const PostButton = styled.button`
 export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 68px; // Acima da mobile sidebar
-  right: 0.8rem;
+  right: 15%;
   z-index: 11000;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
@@ -244,7 +245,7 @@ export const MobilePostButton = styled.button`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  @media (min-width: 461px) {
+  @media (min-width: 460px) {
     display: none;
   }
 `;
