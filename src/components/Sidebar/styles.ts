@@ -102,7 +102,7 @@ export const NavList = styled.ul`
   @media (max-width: 460px) {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 `;
@@ -110,6 +110,12 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   width: 100%;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 460px) {
+    width: auto;
+    flex: 1 1 0;
+    margin-bottom: 0;
+  }
 
   a {
     display: flex;
@@ -213,7 +219,7 @@ export const PostButton = styled.button`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: 460px) {
     display: none;
   }
 `;
@@ -235,7 +241,7 @@ export const MobilePostButton = styled.button`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  @media (min-width: 460px) {
+  @media (min-width: 461px) {
     display: none;
   }
 `;
