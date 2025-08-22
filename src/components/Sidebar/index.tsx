@@ -29,7 +29,7 @@ const Sidebar = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const isMobile = useMediaQuery({ maxWidth: 425 });
+  const isMobile = useMediaQuery({ maxWidth: 460 });
 
   const { notifications } = useNotifications();
 

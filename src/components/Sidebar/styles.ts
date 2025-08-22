@@ -31,7 +31,7 @@ export const SidebarContainer = styled.aside`
     min-width: 115px;
   }
 
-  /* MOBILE: forçar barra inferior*/
+  // MOBILE: forçar barra inferior
   @media (max-width: 460px) {
     && {
       position: fixed !important;
@@ -54,7 +54,7 @@ export const SidebarContainer = styled.aside`
       background-image: ${({ theme }) => theme.colors.backgroundGradient};
       border-right: none;
       border-top: 2px solid ${({ theme }) => theme.colors.border};
-      padding: 0;
+      padding: 0 1rem;
 
       transform: translateZ(0);
       will-change: transform;
@@ -231,8 +231,8 @@ export const PostButton = styled.button`
 export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 68px;
-  right: 24px;
-  z-index: 11000;
+  right: 8rem;
+  z-index: 10000;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
   border: none;
@@ -245,7 +245,7 @@ export const MobilePostButton = styled.button`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  @media (min-width: 460px) {
+  @media (min-width: 461px) {
     display: none;
   }
 `;
