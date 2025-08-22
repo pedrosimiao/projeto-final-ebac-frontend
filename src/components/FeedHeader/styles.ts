@@ -22,7 +22,7 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   background-clip: padding-box;
   color: ${({ theme }) => theme.colors.text};
   text-shadow: none;
-  z-index: 9999;
+  z-index: 10000;
 `;
 
 export const BackLink = styled(Link)`

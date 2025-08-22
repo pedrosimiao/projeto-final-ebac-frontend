@@ -32,7 +32,7 @@ export const SidebarContainer = styled.aside`
   }
 
   /* MOBILE: forçar barra inferior*/
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     && {
       position: fixed !important;
       inset: auto 0 0 0;
