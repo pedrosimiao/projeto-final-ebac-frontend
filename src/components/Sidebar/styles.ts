@@ -246,7 +246,7 @@ export const MobilePostButton = styled.button`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  @media (maz-width: 460px) {
+  @media (max-width: 460px) {
     display: flex;
     align-items: center;
     justify-content: center;
