@@ -57,7 +57,7 @@ export const SidebarContainer = styled.aside`
       background-image: ${({ theme }) => theme.colors.backgroundGradient};
       border-right: none;
       border-top: 2px solid ${({ theme }) => theme.colors.border};
-      padding: 0 1rem;
+      padding: 0 1.3rem;
 
       transform: translateZ(0);
       will-change: transform;
@@ -71,11 +71,11 @@ export const InnerContainer = styled.div`
   flex-direction: column;
 
   @media (max-width: 460px) {
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 
     img {
       display: none;
@@ -234,7 +234,7 @@ export const PostButton = styled.button`
 export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 68px;
-  right: 8rem;
+  right: 1.5rem;
   z-index: 10000;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};

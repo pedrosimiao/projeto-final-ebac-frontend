@@ -41,6 +41,9 @@ const Sidebar = () => {
   });
 };
 
+  const isHomeOrProfile = location.pathname === '/home' || (currentUser && location.pathname === `/${currentUser.username}`);
+  const showMobileButton = isMobile && isHomeOrProfile;
+
   return (
     <SidebarContainer>
       <InnerContainer>
@@ -100,7 +103,7 @@ const Sidebar = () => {
           </PostButton>
         </PostButtonContainer>
 
-        {isMobile && (
+        {showMobileButton && (
           <MobilePostButton
             onClick={handlePostClick}
           >
