@@ -15,8 +15,9 @@ export const ProfileContainer = styled.div`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};
 
-  @media (maz-width: 460px) {
-    height: 300px;
+  @media (max-width: 460px) {
+    max-height: 300px;
+    padding-bottom: 1rem;
   }
 `;
 
