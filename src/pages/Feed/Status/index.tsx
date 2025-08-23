@@ -156,7 +156,7 @@ const StatusPage = () => {
   }
 
   return (
-    <StatusContainer>
+    <>
       <FeedHeader>
         <BackLink to={back}>
           <FaArrowLeft />
@@ -165,54 +165,55 @@ const StatusPage = () => {
           <h1>{isPostRoute ? "Post" : "Comment"}</h1>
         </FeedHeaderTextContent>
       </FeedHeader>
+      <StatusContainer>
+        {/* Post */}
+        {isPostRoute && currentPost && (
+          <>
+            <PostDetailCard post={currentPost} />
+            <ReplyInput postId={currentPost.id} />
+            <CommentList
+              comments={commentsToDisplay}
+              contextCommentId={null}
+              pageScrollRef={pageScrollRef} // ref do root do observer
 
-      {/* Post */}
-      {isPostRoute && currentPost && (
-        <>
-          <PostDetailCard post={currentPost} />
-          <ReplyInput postId={currentPost.id} />
-          <CommentList
-            comments={commentsToDisplay}
-            contextCommentId={null}
-            pageScrollRef={pageScrollRef} // ref do root do observer
+              // props de paginação para comments raíz
+              fetchNextPage={fetchNextRootCommentsPage}
+              hasNextPage={hasNextRootCommentsPage}
+              isFetchingNextPage={isFetchingNextRootCommentsPage}
+              isLoading={isRootCommentsLoading}
+              isError={isRootCommentsError}
+              error={rootCommentsError}
+            />
+          </>
+        )}
 
-            // props de paginação para comments raíz
-            fetchNextPage={fetchNextRootCommentsPage}
-            hasNextPage={hasNextRootCommentsPage}
-            isFetchingNextPage={isFetchingNextRootCommentsPage}
-            isLoading={isRootCommentsLoading}
-            isError={isRootCommentsError}
-            error={rootCommentsError}
-          />
-        </>
-      )}
+        {/* Comment */}
+        {isCommentRoute && currentComment && (
+          <>
+            <CommentDetailCard
+              comment={currentComment}
+              postAuthorUsername={postOfComment?.user?.username}
+            />
+            <div id="reply-input">
+              <ReplyInput parentComment={currentComment} postId={currentComment.post_id} />
+            </div>
+            <CommentList
+              comments={commentsToDisplay}
+              contextCommentId={currentComment.id}
+              pageScrollRef={pageScrollRef} // <-- ref do root do observer
 
-      {/* Comment */}
-      {isCommentRoute && currentComment && (
-        <>
-          <CommentDetailCard
-            comment={currentComment}
-            postAuthorUsername={postOfComment?.user?.username}
-          />
-          <div id="reply-input">
-            <ReplyInput parentComment={currentComment} postId={currentComment.post_id} />
-          </div>
-          <CommentList
-            comments={commentsToDisplay}
-            contextCommentId={currentComment.id}
-            pageScrollRef={pageScrollRef} // <-- ref do root do observer
-
-            // props de paginação para replies
-            fetchNextPage={fetchNextRepliesPage}
-            hasNextPage={hasNextRepliesPage}
-            isFetchingNextPage={isFetchingNextRepliesPage}
-            isLoading={isRepliesLoading}
-            isError={isRepliesError}
-            error={repliesError}
-          />
-        </>
-      )}
-    </StatusContainer>
+              // props de paginação para replies
+              fetchNextPage={fetchNextRepliesPage}
+              hasNextPage={hasNextRepliesPage}
+              isFetchingNextPage={isFetchingNextRepliesPage}
+              isLoading={isRepliesLoading}
+              isError={isRepliesError}
+              error={repliesError}
+            />
+          </>
+        )}
+      </StatusContainer>
+    </>
   );
 };
 

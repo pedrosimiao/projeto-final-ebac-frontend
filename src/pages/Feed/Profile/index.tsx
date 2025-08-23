@@ -204,19 +204,18 @@ const Profile = () => {
 
   return (
     <>
+      <FeedHeader>
+        <BackLink to="/home">
+          <FaArrowLeft />
+        </BackLink>
+        <FeedHeaderTextContent>
+          <UserName>{`${profileUser.firstName} ${profileUser.lastName}`}</UserName>
+          <StatItem>
+            <span>{postCount}</span> posts
+          </StatItem>
+        </FeedHeaderTextContent>
+      </FeedHeader>
       <ProfileContainer>
-        <FeedHeader>
-          <BackLink to="/home">
-            <FaArrowLeft />
-          </BackLink>
-          <FeedHeaderTextContent>
-            <UserName>{`${profileUser.firstName} ${profileUser.lastName}`}</UserName>
-            <StatItem>
-              <span>{postCount}</span> posts
-            </StatItem>
-          </FeedHeaderTextContent>
-        </FeedHeader>
-
         {profileUser.cover_image ? (
           <CoverWrapper>
             <CoverImage src={profileUser.cover_image} alt="Cover" />

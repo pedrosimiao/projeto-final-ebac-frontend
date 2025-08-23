@@ -20,7 +20,7 @@ const Home = () => {
   const { pageScrollRef } = useOutletContext<OutletContextType>()
 
   return (
-    <HomeContainer>
+    <>
       <FeedHeader noPadding={true}>
         <FeedSelector selected={mode === "forYou"} onClick={() => setMode("forYou")}>
           <span>For you</span>
@@ -29,15 +29,16 @@ const Home = () => {
           <span>Following</span>
         </FeedSelector>
       </FeedHeader>
+      <HomeContainer>
+        {mode === "forYou" && (
+          <div id="post-input">
+            <PostInput />
+          </div>
+        )}
 
-      {mode === "forYou" && (
-        <div id="post-input">
-          <PostInput />
-        </div>
-      )}
-
-      <PostList mode={mode} pageScrollRef={pageScrollRef}/>
-    </HomeContainer>
+        <PostList mode={mode} pageScrollRef={pageScrollRef} />
+      </HomeContainer>
+    </>
   );
 };
 

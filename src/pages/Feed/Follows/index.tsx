@@ -37,7 +37,7 @@ export default function FollowsPage() {
 
   if (isProfileUserLoading) {
     return (
-      <FollowsContainer>
+      <>
         <FeedHeader>
           <BackLink to={`/${username || "home"}`}>
             <FaArrowLeft />
@@ -46,16 +46,18 @@ export default function FollowsPage() {
             <h1>Loading...</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <ListLoaderContainer>
-          <LoadingSpinner $spinnerColor="accent" size="2rem" />
-        </ListLoaderContainer>
-      </FollowsContainer>
+        <FollowsContainer>
+          <ListLoaderContainer>
+            <LoadingSpinner $spinnerColor="accent" size="2rem" />
+          </ListLoaderContainer>
+        </FollowsContainer>
+      </>
     );
   }
 
   if (isProfileUserError) {
     return (
-      <FollowsContainer>
+      <>
         <FeedHeader>
           <BackLink to={`/${username || "home"}`}>
             <FaArrowLeft />
@@ -64,14 +66,16 @@ export default function FollowsPage() {
             <h1>Error</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <p>Error loading user profile: {extractErrorMessage(profileUserError)}</p>
-      </FollowsContainer>
+        <FollowsContainer>
+          <p>Error loading user profile: {extractErrorMessage(profileUserError)}</p>
+        </FollowsContainer>
+      </>
     );
   }
 
   if (!profileUser) {
     return (
-      <FollowsContainer>
+      <>
         <FeedHeader>
           <BackLink to={`/${username || "home"}`}>
             <FaArrowLeft />
@@ -80,14 +84,16 @@ export default function FollowsPage() {
             <h1>User Not Found</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <p>The user "{username}" could not be found.</p>
-      </FollowsContainer>
+        <FollowsContainer>
+          <p>The user "{username}" could not be found.</p>
+        </FollowsContainer>
+      </>
     );
   }
 
   if (!pageScrollRef || !pageScrollRef.current) {
     return (
-      <FollowsContainer>
+      <>
         <FeedHeader>
           <BackLink to={`/${profileUser.username}`}>
             <FaArrowLeft />
@@ -96,13 +102,15 @@ export default function FollowsPage() {
             <h1>{profileUser.firstName} {profileUser.lastName}</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <p>Initializing page content...</p>
-      </FollowsContainer>
+        <FollowsContainer>
+          <p>Initializing page content...</p>
+        </FollowsContainer>
+      </>
     );
   }
 
   return (
-    <FollowsContainer>
+    <>
       <FeedHeader noPadding={true}>
         <BackLink to={`/${profileUser.username}`}>
           <FaArrowLeft />
@@ -114,12 +122,13 @@ export default function FollowsPage() {
           <span>Following</span>
         </FeedSelector>
       </FeedHeader>
-
-      <UserList
-        username={profileUser.username}
-        type={mode} // "followers" | "following"
-        pageScrollRef={pageScrollRef} // PageContainer
-      />
-    </FollowsContainer>
+      <FollowsContainer>
+        <UserList
+          username={profileUser.username}
+          type={mode} // "followers" | "following"
+          pageScrollRef={pageScrollRef} // PageContainer
+        />
+      </FollowsContainer>
+    </>
   );
 }

@@ -37,7 +37,7 @@ export default function Notifications() {
 
   if (!pageScrollRef || !pageScrollRef.current) {
     return (
-      <NotificationsContainer>
+      <>
         <FeedHeader>
           <BackLink to="/home">
             <FaArrowLeft />
@@ -46,15 +46,17 @@ export default function Notifications() {
             <h1>Notifications</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <p>Initializing page content...</p> {/* Ou um spinner mais genérico */}
-      </NotificationsContainer>
+        <NotificationsContainer>
+          <p>Initializing page content...</p> {/* Ou um spinner mais genérico */}
+        </NotificationsContainer>
+      </>
     );
   }
 
 
   if (isLoading && notifications.length === 0) {
     return (
-      <NotificationsContainer>
+      <>
         <FeedHeader>
           <BackLink to="/home">
             <FaArrowLeft />
@@ -63,14 +65,16 @@ export default function Notifications() {
             <h1>Notifications</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <NotificationList pageScrollRef={pageScrollRef} />
-      </NotificationsContainer>
+        <NotificationsContainer>
+          <NotificationList pageScrollRef={pageScrollRef} />
+        </NotificationsContainer>
+      </>
     );
   }
 
   if (isError) {
     return (
-      <NotificationsContainer>
+      <>
         <FeedHeader>
           <BackLink to="/home">
             <FaArrowLeft />
@@ -79,13 +83,15 @@ export default function Notifications() {
             <h1>Notifications</h1>
           </FeedHeaderTextContent>
         </FeedHeader>
-        <p>Error loading notifications: {error?.message}</p>
-      </NotificationsContainer>
+        <NotificationsContainer>
+          <p>Error loading notifications: {error?.message}</p>
+        </NotificationsContainer>
+      </>
     );
   }
 
   return (
-    <NotificationsContainer>
+    <>
       <FeedHeader>
         <BackLink to="/home">
           <FaArrowLeft />
@@ -94,7 +100,9 @@ export default function Notifications() {
           <h1>Notifications</h1>
         </FeedHeaderTextContent>
       </FeedHeader>
-      <NotificationList pageScrollRef={pageScrollRef} />
-    </NotificationsContainer>
+      <NotificationsContainer>
+        <NotificationList pageScrollRef={pageScrollRef} />
+      </NotificationsContainer>
+    </>
   );
 }
