@@ -14,6 +14,10 @@ export const ProfileContainer = styled.div`
   padding-bottom: 0.3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};
+
+  @media (maz-width: 460px) {
+    height: 300px;
+  }
 `;
 
 export const CoverWrapper = styled.div`
