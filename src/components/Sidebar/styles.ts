@@ -232,7 +232,7 @@ export const PostButton = styled.button`
 `;
 
 export const MobilePostButton = styled.button`
-  position: fixed;
+  position: fixed !important;
   bottom: 68px;
   right: 1.5rem;
   z-index: 9998;
