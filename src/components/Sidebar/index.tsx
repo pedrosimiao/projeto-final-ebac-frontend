@@ -41,7 +41,7 @@ const Sidebar = () => {
   });
 };
 
-  const isHomeOrProfile = location.pathname === '/' || (currentUser && location.pathname === `/${currentUser.username}`);
+  const isHomeOrProfile = location.pathname === '/home' || (currentUser && location.pathname === `/${currentUser.username}`);
   const showMobileButton = isMobile && isHomeOrProfile;
 
   return (
