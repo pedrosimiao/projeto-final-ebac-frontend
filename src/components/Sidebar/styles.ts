@@ -235,22 +235,26 @@ export const MobilePostButton = styled.button`
   position: fixed;
   bottom: 68px;
   right: 1.5rem;
-  z-index: 10000;
+  z-index: 9998;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.background};
   border: none;
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  display: none;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
+  /*
   @media (max-width: 460px) {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
 `;
 
 export const NotificationBadge = styled.div`
