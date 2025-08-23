@@ -25,7 +25,7 @@ export const CoverWrapper = styled.div`
 
 export const CoverImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
