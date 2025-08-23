@@ -236,7 +236,7 @@ export const MobilePostButton = styled.button`
   bottom: 68px;
   right: 1.5rem;
   z-index: 9998;
-  background-color: ${({ theme }) => theme.colors.accent};
+  background-color: ${({ theme }) => theme.colors.text};
   color: ${({ theme }) => theme.colors.background};
   border: none;
   border-radius: 50%;

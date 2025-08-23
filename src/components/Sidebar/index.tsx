@@ -41,78 +41,79 @@ const Sidebar = () => {
   });
 };
 
-  const isHomeOrProfile = location.pathname === '/home' || (currentUser && location.pathname === `/${currentUser.username}`);
+  const isHomeOrProfile = location.pathname === '/' || (currentUser && location.pathname === `/${currentUser.username}`);
   const showMobileButton = isMobile && isHomeOrProfile;
 
   return (
-    <SidebarContainer>
-      <InnerContainer>
+    <>
+      <SidebarContainer>
+        <InnerContainer>
 
-        <LogoWrapper>
-          <Logo width="120px" height="auto" />
-        </LogoWrapper>
+          <LogoWrapper>
+            <Logo width="120px" height="auto" />
+          </LogoWrapper>
 
-        <NavList>
-          <NavItem>
-            <Link to="/">
-              <FaHome />
-              <span>Home</span>
-            </Link>
-          </NavItem>
+          <NavList>
+            <NavItem>
+              <Link to="/">
+                <FaHome />
+                <span>Home</span>
+              </Link>
+            </NavItem>
 
-          <NavItem>
-            <Link to="/explore">
-              <FaSearch />
-              <span>Explore</span>
-            </Link>
-          </NavItem>
+            <NavItem>
+              <Link to="/explore">
+                <FaSearch />
+                <span>Explore</span>
+              </Link>
+            </NavItem>
 
-          <NavItem>
-            <Link to="/notifications">
-              <BellWrapper>
-                <FaBell />
-                {unreadCount > 0 && (
-                  <NotificationBadge>
-                    {unreadCount > 99 ? "99+" : unreadCount}
-                  </NotificationBadge>
-                )}
-              </BellWrapper>
-              <span>Notifications</span>
-            </Link>
-          </NavItem>
+            <NavItem>
+              <Link to="/notifications">
+                <BellWrapper>
+                  <FaBell />
+                  {unreadCount > 0 && (
+                    <NotificationBadge>
+                      {unreadCount > 99 ? "99+" : unreadCount}
+                    </NotificationBadge>
+                  )}
+                </BellWrapper>
+                <span>Notifications</span>
+              </Link>
+            </NavItem>
 
-          <NavItem>
-            <Link to={currentUser ? `/${currentUser.username}` : "/login"}>
-              <FaRegKiss />
-              <span>Profile</span>
-            </Link>
-          </NavItem>
+            <NavItem>
+              <Link to={currentUser ? `/${currentUser.username}` : "/login"}>
+                <FaRegKiss />
+                <span>Profile</span>
+              </Link>
+            </NavItem>
 
-          <NavItem>
-            <Link to="/settings">
-              <FaEllipsisH />
-              <span>Settings</span>
-            </Link>
-          </NavItem>
-        </NavList>
+            <NavItem>
+              <Link to="/settings">
+                <FaEllipsisH />
+                <span>Settings</span>
+              </Link>
+            </NavItem>
+          </NavList>
 
-        <PostButtonContainer>
-          <PostButton onClick={handlePostClick}>
-            <FaPlus />
-            <span>Post</span>
-          </PostButton>
-        </PostButtonContainer>
+          <PostButtonContainer>
+            <PostButton onClick={handlePostClick}>
+              <FaPlus />
+              <span>Post</span>
+            </PostButton>
+          </PostButtonContainer>
+        </InnerContainer>
+      </SidebarContainer>
 
-        {showMobileButton && (
-          <MobilePostButton
-            onClick={handlePostClick}
-          >
-            <FaFeatherAlt size={24} />
-          </MobilePostButton>
-        )}
-
-      </InnerContainer>
-    </SidebarContainer>
+      {showMobileButton && (
+        <MobilePostButton
+          onClick={handlePostClick}
+        >
+          <FaFeatherAlt size={24} />
+        </MobilePostButton>
+      )}
+    </>
   );
 };
 
