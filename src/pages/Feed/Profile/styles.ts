@@ -8,7 +8,7 @@ export const ProfileContainer = styled.div`
   width: 100%;
   /* max-width: 600px; */
   /* min-height: calc(100vh - 60px); */
-  height: 100%;
+  height: auto;
   margin: 0;
   /* padding-top: 3.25rem; */
   padding-bottom: 0.3rem;
@@ -16,7 +16,7 @@ export const ProfileContainer = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};
 
   @media (max-width: 460px) {
-    max-height: 300px;
+    max-height: auto;
     padding-bottom: 1rem;
   }
 `;
