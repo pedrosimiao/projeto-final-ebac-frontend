@@ -153,13 +153,12 @@ export const NavItem = styled.li`
 
     @media (max-width: 460px) {
       flex-direction: column;
-
-      span {
+      align-items: center span {
         display: none;
       }
 
       svg {
-        margin-top: 1.3rem;
+        /* margin-top: 1.3rem; */
         margin-right: 0;
       }
     }
