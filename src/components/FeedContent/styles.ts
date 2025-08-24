@@ -10,6 +10,7 @@ export const FeedContainer = styled.main`
   min-height: 100dvh;
   /* flex-grow: 0; */
   position: relative;
+  overflow-y: clip;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-basis: 100%;
