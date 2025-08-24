@@ -143,7 +143,7 @@ export const NavItem = styled.li`
       filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 460px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
       justify-content: center;
 
       span {
