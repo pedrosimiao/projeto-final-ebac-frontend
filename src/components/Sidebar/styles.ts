@@ -89,11 +89,11 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 426px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 460px) {
     display: none;
   }
 `;
@@ -143,7 +143,7 @@ export const NavItem = styled.li`
       filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 464px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) and (min-width: 460px) {
       justify-content: center;
 
       span {
@@ -158,7 +158,7 @@ export const NavItem = styled.li`
       }
 
       svg {
-        /* margin-top: 1.3rem; */
+        margin-top: 1rem;
         margin-right: 0;
       }
     }
