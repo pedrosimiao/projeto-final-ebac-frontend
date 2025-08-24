@@ -61,7 +61,7 @@ const Explore = () => {
   const errorMessage = usersError?.message || hashtagsError?.message || "An unknown error occurred.";
 
   return (
-    <ExploreContainer>
+    <>
       <FeedHeader>
         <BackLink to={back}>
           <FaArrowLeft />
@@ -70,38 +70,39 @@ const Explore = () => {
           <h1>Explore</h1>
         </FeedHeaderTextContent>
       </FeedHeader>
-
-      <SearchBar
-        placeholder="Search users or #hashtags"
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
-
-      {isLoading && (
-        <ListLoaderContainer>
-          <LoadingSpinner size="2rem" />
-        </ListLoaderContainer>
-      )}
-
-      {hasError && (
-        <ListLoaderContainer style={{ color: "red" }}>
-          <p>Error: {errorMessage}</p>
-        </ListLoaderContainer>
-      )}
-
-      {!isLoading && !hasError && debouncedSearchTerm ? (
-        <SearchList
-          users={users}
-          hashtags={hashtags}
+      <ExploreContainer>
+        <SearchBar
+          placeholder="Search users or #hashtags"
+          value={searchTerm}
+          onChange={handleSearchChange}
         />
-      ) : (
-        !isLoading && !hasError && (
+
+        {isLoading && (
           <ListLoaderContainer>
-            <p style={{ fontStyle: "italic", textAlign: "center" }}>Start typing to search users or hashtags.</p>
+            <LoadingSpinner size="2rem" />
           </ListLoaderContainer>
-        )
-      )}
-    </ExploreContainer>
+        )}
+
+        {hasError && (
+          <ListLoaderContainer style={{ color: "red" }}>
+            <p>Error: {errorMessage}</p>
+          </ListLoaderContainer>
+        )}
+
+        {!isLoading && !hasError && debouncedSearchTerm ? (
+          <SearchList
+            users={users}
+            hashtags={hashtags}
+          />
+        ) : (
+          !isLoading && !hasError && (
+            <ListLoaderContainer>
+              <p style={{ fontStyle: "italic", textAlign: "center" }}>Start typing to search users or hashtags.</p>
+            </ListLoaderContainer>
+          )
+        )}
+      </ExploreContainer>
+    </>
   );
 };
 

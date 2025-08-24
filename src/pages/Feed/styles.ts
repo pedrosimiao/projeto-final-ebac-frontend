@@ -8,7 +8,7 @@ export const PageContainer = styled.div`
   height: 100vh;
   overflow-y: auto;
 
-  @media (max-width: 425px) {
+  @media (max-width: 460px) {
     flex-direction: column;
     height: calc(100vh - 60px);
   }

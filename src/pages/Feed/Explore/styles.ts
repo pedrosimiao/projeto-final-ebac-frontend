@@ -7,7 +7,7 @@ export const ExploreContainer = styled.div`
   /* max-width: 600px; */
   /* min-height: calc(100vh - 60px); */
   height: 100%;
-  margin-top: 3.25rem;
+  /* margin-top: 3.25rem; */
   display: flex;
   flex-direction: column;
 `;
