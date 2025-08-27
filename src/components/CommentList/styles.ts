@@ -4,8 +4,6 @@ export const CommentListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* padding horizontal se necessário, mas CUIDADO para não duplicar com CommentCard */
-  /* padding: 0 1rem; */
 `;
 
 export const ButtonContainer = styled.div`

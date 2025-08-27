@@ -5,6 +5,8 @@ import styled from "styled-components";
 const HomeContainer = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
