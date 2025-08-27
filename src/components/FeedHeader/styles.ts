@@ -14,16 +14,21 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   position: fixed;
   top: 0;
   left: ${({ $fixedLeft }) => $fixedLeft}px;
-  width: ${({ $fixedWidth }) => $fixedWidth}px;
+  width: min(${({ $fixedWidth }) => $fixedWidth}px, 600px);
+
   display: flex;
   flex-direction: row;
   align-items: center;
+
   height: 3.25rem;
   padding: ${({ $noPadding }) => ($noPadding ? "0" : "1rem")};
+
   background-image: ${({ theme }) => theme.colors.backgroundGradient};
   background-clip: padding-box;
+
   color: ${({ theme }) => theme.colors.text};
   text-shadow: none;
+
   z-index: 9999;
 `;
 

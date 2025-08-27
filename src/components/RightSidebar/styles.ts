@@ -5,8 +5,6 @@ import styled from "styled-components";
 export const RightSidebarContainer = styled.aside`
   position: sticky;
   top: 0;
-
-  /* width: 30vw; */
   flex: 1 1 30vw;
   min-width: 0;
 
@@ -41,6 +39,11 @@ export const RightSidebarCard = styled.div`
   border-radius: 16px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 0.3rem 0.5rem;
+    max-width: 280px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
@@ -65,13 +68,7 @@ export const UserAvatar = styled.img`
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 32px;
-    height: 32px;
-  }
 `;
-
 
 export const SuggestionList = styled.ul`
   width: 100%;
@@ -92,7 +89,6 @@ export const SuggestionRow = styled.div`
   padding: 2rem auto;
 `;
 
-
 export const FollowButton = styled.button`
   font-size: 0.8rem;
   padding: 0.4rem 0.8rem;
@@ -105,10 +101,6 @@ export const FollowButton = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryDark};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    padding: 0.2rem 0.4rem;
   }
 `;
 
