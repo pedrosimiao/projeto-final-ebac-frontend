@@ -3,8 +3,8 @@
 import styled from "styled-components";
 
 export const FeedContainer = styled.main`
-  /* flex: 1 1 min(600px, 100%); */
-  /* width: min(600px, 100%); */
+  flex: 1 1 min(600px, 100%);
+  width: min(600px, 100%);
   min-width: 0;
   min-height: 100dvh;
   position: relative;
