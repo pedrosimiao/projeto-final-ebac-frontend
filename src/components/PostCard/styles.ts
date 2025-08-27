@@ -12,6 +12,7 @@ interface RetweetProps {
 export const PostContainer = styled.div<RetweetProps>`
   position: relative;
   padding: ${({ $hasRepliedTo }) => ($hasRepliedTo ? "2.2rem 1rem 1rem" : "1rem")};
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-bottom: ${({ $isRetweet, theme }) =>
