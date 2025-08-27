@@ -11,6 +11,8 @@ import LoadingSpinner from "../Loading";
 
 import { ListLoaderContainer } from "../Loading/styles";
 
+import defaultAvatar from "../../assets/default-avatar.png"
+
 import {
   List,
   Item,
@@ -148,7 +150,7 @@ export default function UserList({ username, type, pageScrollRef }: UserListProp
     <List>
       {users.map((user: IUser) => (
         <Item key={user.id} onClick={() => navigate(`/${user.username}`)}>
-          <Avatar src={user.profile_picture || "/default-avatar.png"} alt={user.username} />
+          <Avatar src={user.profile_picture || defaultAvatar} alt={user.username} />
           <UserInfo>
             <UserName>{user.firstName} {user.lastName}</UserName>
             <UserHandle>@{user.username}</UserHandle>

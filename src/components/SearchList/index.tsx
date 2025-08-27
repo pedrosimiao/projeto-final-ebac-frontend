@@ -5,6 +5,8 @@ import { IUser } from '../../types';
 import { IHashtag } from '../../api/hashtagApi';
 import { useNavigate } from 'react-router-dom';
 
+import defaultAvatar from "../../assets/default-avatar.png"
+
 // Importar componentes estilizados do UserList
 import {
   List as UserListContainer,
@@ -55,7 +57,7 @@ const SearchList = ({ users, hashtags }: SearchListProps) => {
               <UserListContainer>
                 {users.map((user: IUser) => (
                   <UserListItem key={user.id} onClick={() => handleUserClick(user.username)}>
-                    <UserAvatarComponent src={user.profile_picture || "/default-avatar.png"} alt={user.username} />
+                    <UserAvatarComponent src={user.profile_picture || defaultAvatar} alt={user.username} />
                     <UserInfoComponent>
                       <UserNameComponent>{user.firstName} {user.lastName}</UserNameComponent>
                       <UserHandleComponent>@{user.username}</UserHandleComponent>

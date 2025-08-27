@@ -8,6 +8,8 @@ import { IUser } from "../../types";
 
 import { useRandomHashtags } from "../../hooks/useHashtags";
 
+import defaultAvatar from "../../assets/default-avatar.png"
+
 import {
   RightSidebarContainer,
   RightSidebarCard,
@@ -129,8 +131,8 @@ const RightSidebar = () => {
           {topSuggestions.map((user: IUser) => (
             <SuggestionItem key={user.id}>
               <SuggestionRow>
-                <Wrapper onClick={() => handleUserClick(user.username)} style={{ cursor: "pointer" }}> 
-                  <UserAvatar src={user.profile_picture || "/default-avatar.png"} />
+                <Wrapper onClick={() => handleUserClick(user.username)} style={{ cursor: "pointer" }}>
+                  <UserAvatar src={user.profile_picture || defaultAvatar} />
                   <span>@{user.username}</span>
                 </Wrapper>
                 <FollowUserButton targetUserId={user.id} />

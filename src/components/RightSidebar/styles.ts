@@ -41,7 +41,7 @@ export const RightSidebarCard = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: 0.3rem 0.5rem;
-    width: 95%;
+    width: 100%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

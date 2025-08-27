@@ -12,6 +12,8 @@ import { getTimeAgo } from "../../utils/dateUtils";
 
 import { INotification } from "../../types";
 
+import defaultAvatar from "../../assets/default-avatar.png"
+
 import {
   List,
   Item,
@@ -127,7 +129,7 @@ export default function NotificationList({ pageScrollRef }: NotificationListProp
         return (
           <Item key={notification.id} onClick={handleItemClick}>
             <Avatar
-              src={sender.profile_picture || "/default-avatar.png"}
+              src={sender.profile_picture || defaultAvatar}
               alt={sender.username}
               onClick={handleSenderClick}
             />
