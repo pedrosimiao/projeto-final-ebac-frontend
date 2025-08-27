@@ -15,7 +15,7 @@ export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   top: 0;
   left: ${({ $fixedLeft }) => $fixedLeft}px;
   width: ${({ $fixedWidth }) => $fixedWidth}px;
-  max-width: 600px;
+
   display: flex;
   flex-direction: row;
   align-items: center;
