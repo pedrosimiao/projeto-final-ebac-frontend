@@ -11,7 +11,7 @@ interface FeedHeaderProps {
 }
 
 export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: ${({ $fixedLeft }) => $fixedLeft}px;
   width: ${({ $fixedWidth }) => $fixedWidth}px;
