@@ -1,7 +1,8 @@
 // src/components/FeedHeader/index.tsx
 
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
 import { FeedHeaderContainer } from "./styles";
+import { FeedLayoutContext } from "../../app/FeedLayoutContext";
 
 interface FeedHeaderProps {
   children: ReactNode;
@@ -9,7 +10,17 @@ interface FeedHeaderProps {
 }
 
 const FeedHeader = ({ children, noPadding }: FeedHeaderProps) => {
-  return <FeedHeaderContainer $noPadding={noPadding}>{children}</FeedHeaderContainer>;
+  const { feedContainerDimensions } = useContext(FeedLayoutContext);
+
+  return (
+    <FeedHeaderContainer
+      $noPadding={noPadding}
+      $fixedLeft={feedContainerDimensions.left}
+      $fixedWidth={feedContainerDimensions.width}
+    >
+      {children}
+    </FeedHeaderContainer>
+  );
 };
 
 export default FeedHeader;

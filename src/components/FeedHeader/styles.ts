@@ -6,16 +6,18 @@ import { Link } from "react-router-dom";
 interface FeedHeaderProps {
   // transient prop
   $noPadding?: boolean;
+  $fixedLeft?: number;
+  $fixedWidth?: number;
 }
 
 export const FeedHeaderContainer = styled.header<FeedHeaderProps>`
   position: sticky;
   top: 0;
+  left: ${({ $fixedLeft }) => $fixedLeft}px;
+  width: ${({ $fixedWidth }) => $fixedWidth}px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: inherit;
-  width: 100%;
   height: 3.25rem;
   padding: ${({ $noPadding }) => ($noPadding ? "0" : "1rem")};
   background-image: ${({ theme }) => theme.colors.backgroundGradient};
