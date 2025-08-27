@@ -64,14 +64,11 @@ export function usePostLikesCount(postId: string | undefined) {
       const response = await fetchPostLikesCount(actualPostId);
       return response;
     },
-    select: (data) => data.count,
+    select: data => data.count,
     enabled: enabledQuery, // enabled baseado na existência do ID
     staleTime: 1000 * 60 * 5,
     gcTime: 1000 * 60 * 10,
-    refetchOnWindowFocus: false,
-    // definir um initialData p garantir que seja 0 desde o início,
-    // mas o `select` e a lógica do `queryFn` já cobrem isso.
-    initialData: { count: 0 },
+    refetchOnWindowFocus: true,
   });
 }
 
@@ -95,8 +92,7 @@ export function useCommentLikesCount(commentId: string | undefined) {
     enabled: enabledQuery,
     staleTime: 1000 * 60 * 5,
     gcTime: 1000 * 60 * 10,
-    refetchOnWindowFocus: false,
-    initialData: { count: 0 },
+    refetchOnWindowFocus: true,
   });
 }
 
@@ -121,12 +117,11 @@ export function useHasLikedPost(postId: string | undefined) {
       const response = await fetchHasLikedPost(actualPostId);
       return response;
     },
-    select: (data) => data.has_liked,
+    select: data => data.has_liked,
     enabled: enabledQuery,
     staleTime: 1000 * 60,
     gcTime: 1000 * 60 * 5,
     refetchOnWindowFocus: true,
-    initialData: { has_liked: false },
   });
 }
 
@@ -154,9 +149,10 @@ export function useHasLikedComment(commentId: string | undefined) {
     staleTime: 1000 * 60,
     gcTime: 1000 * 60 * 5,
     refetchOnWindowFocus: true,
-    initialData: { has_liked: false },
   });
 }
+
+
 // --- MUTATIONS ---
 
 /**
