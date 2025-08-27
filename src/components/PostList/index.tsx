@@ -15,6 +15,7 @@ import {
 } from "../../hooks/usePosts";
 
 import { ListLoaderContainer } from "../Loading/styles";
+import { PostListContainer } from "./styles";
 
 export type PostListMode = "profile" | "following" | "forYou";
 
@@ -185,7 +186,7 @@ const PostList = ({ mode, profileUserId, pageScrollRef }: PostListProps) => {
   }
 
   return (
-    <div>
+    <PostListContainer>
       {currentPosts.map((post: IPost) => (
         <Post key={post.id} post={post} />
       ))}
@@ -207,7 +208,7 @@ const PostList = ({ mode, profileUserId, pageScrollRef }: PostListProps) => {
           </div>
         </ListLoaderContainer>
       )}
-    </div>
+    </PostListContainer>
   );
 };
 

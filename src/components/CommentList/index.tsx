@@ -10,6 +10,7 @@ import LoadingSpinner from "../Loading"
 import { ListLoaderContainer } from "../Loading/styles"
 
 import { CommentListWrapper } from "./styles";
+import { PostListContainer } from "../PostList/styles";
 
 interface CommentListProps {
   comments: IComment[];
@@ -125,7 +126,7 @@ const CommentList = ({
 
 
   return (
-    <div>
+    <PostListContainer>
       {/* render conteúdo principal (comentários ou mensagens de estado) */}
       {commentsContent}
 
@@ -141,7 +142,7 @@ const CommentList = ({
           <div>Scroll to load more</div>
         )}
       </ListLoaderContainer>
-    </div>
+    </PostListContainer>
   );
 };
 
