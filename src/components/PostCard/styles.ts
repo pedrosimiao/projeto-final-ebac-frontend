@@ -249,3 +249,11 @@ export const FooterAction = styled.div`
     }
   }
 `;
+
+export const ReplyViewer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: ${({ theme }) => theme.colors.accent};
+  font-size: 0.9rem;
+`;

@@ -41,6 +41,7 @@ import {
   RepliedToLabel,
   RepliedToLink,
 } from "./styles";
+import { ReplyViewer } from "../PostCard/styles";
 
 
 interface CommentProps {
@@ -154,13 +155,15 @@ const CommentCard = ({ comment, onToggleReplies, isExpanded }: CommentProps) => 
           {hasLiked ? <FaHeart color="#E0245E" /> : <FaHeart color="inherit" />}
           <span>{likeCount}</span>
         </FooterAction>
+      </PostFooter>
 
+      <ReplyViewer>
         {repliesCount > 0 && (
           <FooterAction onClick={handleRepliesClick}>
             <span>{isExpanded ? "Hide replies" : `View all ${repliesCount} replies`}</span>
           </FooterAction>
         )}
-      </PostFooter>
+      </ReplyViewer>
     </PostContainer>
   );
 };
