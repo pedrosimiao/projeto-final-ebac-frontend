@@ -87,9 +87,10 @@ const StatusPage = () => {
             const parentIndex = newComments.findIndex(c => c.id === commentId);
 
             if (parentIndex !== -1) {
-              const repliesToRemove = newComments.filter(c => c.parent_comment?.id === commentId);
-              const repliesCount = repliesToRemove.length;
-              newComments.splice(parentIndex + 1, repliesCount, ...replies);
+              const lastReplyIndex = newComments.findIndex(c => c.parent_comment?.id === commentId);
+              const insertionIndex = (lastReplyIndex !== -1) ? lastReplyIndex + 1 : parentIndex + 1;
+
+              newComments.splice(insertionIndex, 0, ...replies);
             }
             return newComments;
           });
