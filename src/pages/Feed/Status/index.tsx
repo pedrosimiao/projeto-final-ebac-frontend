@@ -70,7 +70,7 @@ const StatusPage = () => {
       try {
         await queryClient.fetchQuery({
           queryKey: ['comments', 'repliesList', commentId],
-          queryFn: () => fetchRepliesToCommentRequest(commentId),
+          queryFn: async () => (await fetchRepliesToCommentRequest(commentId)).data,
         });
 
         setExpandedComments(prev => new Set(prev).add(commentId));
